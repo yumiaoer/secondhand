@@ -1,0 +1,38 @@
+<%= form_for(@thing) do |f| %>
+  <% if @thing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@thing.errors.count, "error") %> prohibited this thing from being saved:</h2>
+
+      <ul>
+      <% @thing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+  <div class="field">
+    <%= f.label "名称：" %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label "成新率：" %>
+    <%= f.number_field :depreciation_rate %>
+  </div>
+  <div class="field">
+    <%= f.label "价格：" %>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label "类型：" %>
+    <%= f.select :style, ['家用电器','数码产品','衣物','清洁用品','办公用品','床上用品','书籍'] %>
+  </div>
+  <div class="field">
+    <%= f.label "详细描述：" %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit '确认发布'  %>
+  </div>
+<% end %>
