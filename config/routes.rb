@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: things_path
+  root to: 'http://localhost:3000/'
   resources :administrators
   resources :collects
   resources :comments
