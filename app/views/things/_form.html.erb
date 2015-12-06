@@ -11,43 +11,28 @@
     </div>
   <% end %>
 
+  <br><br>
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label "名称：" %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :depreciation_rate %><br>
-    <%= f.text_field :depreciation_rate %>
+    <%= f.label "成新率：" %>
+    <%= f.number_field :depreciation_rate %>
   </div>
   <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+    <%= f.label "价格：" %>
+    <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :style %><br>
-    <%= f.number_field :style %>
+    <%= f.label "类型：" %>
+    <%= f.select :style, ['家用电器','数码产品','衣物','清洁用品','办公用品','床上用品','书籍'] %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label "详细描述：" %>
     <%= f.text_area :description %>
   </div>
-  <div class="field">
-    <%= f.label :commission %><br>
-    <%= f.check_box :commission %>
-  </div>
-  <div class="field">
-    <%= f.label :delivery %><br>
-    <%= f.check_box :delivery %>
-  </div>
-  <div class="field">
-    <%= f.label :erasure %><br>
-    <%= f.check_box :erasure %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '确认发布'  %>
   </div>
 <% end %>

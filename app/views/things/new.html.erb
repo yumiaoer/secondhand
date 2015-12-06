@@ -1,5 +1,13 @@
-<h1>New Thing</h1>
+<head>
+    <div align=center>
+        发布新商品
+    </div>
+</head>
 
-<%= render 'form' %>
+<body>
+    <div align=center>
+        <%= render 'form' %>
+        <%= link_to '取消发布', things_path %>
+    </div>
+<body>
 
-<%= link_to 'Back', things_path %>
