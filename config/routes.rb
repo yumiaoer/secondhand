@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: '/'
+  root to: things_path
   resources :administrators
   resources :collects
   resources :comments
